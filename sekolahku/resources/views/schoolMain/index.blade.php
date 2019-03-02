@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ secure_asset('schoolassets/css') }}/{{ $data->css }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ secure_asset('schoolassets/js') }}/{{ $data->js }}"></script>
 @endsection
 
 @section('title')
@@ -22,8 +23,8 @@
                 <h6><i>{{ $data->caption }}</i></h6>
             </div>
             <div class="col-md-2" id="language">
-                <label class="btn btn-success"><i class="fas fa-language"></i> Language</label>
-                <select class="form-control" name="language">
+                <label class="btn btn-success"><i class="fas fa-language"></i>{{ $data->languageChoose }}</label>
+                <select class="form-control" name="language" id="language">
                     <option value="en">English</option>
                     <option value="id">Indonesia</option>
                 </select>
@@ -34,16 +35,13 @@
         </div>
     </div>
     @include('template/navigation')
-@endsection
-
-@section('mainTopic')
     <div class="hero-image">
         <div class="hero-text">
-            <h1>BETA SCHOOL MANAGEMENT SYSTEM</h1>
+            <h1>{{ $data->imageWord }}</h1>
             <h6 style="text-align:center;">
-                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet eveniet architecto tempore odio facilis
-                adipisicing elit -
+               {{ $data->imageCaption }}
             </h6>
         </div>
     </div> 
-@endsection 
+    @include('template/footer')
+@endsection

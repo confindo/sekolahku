@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Lang;
+
 class SchoolController extends Controller
 {
     //
@@ -23,6 +25,11 @@ class SchoolController extends Controller
         neque earum tempora autem. At sunt quibusdam sae -";
         $this->_optImage = "ribbon.png";
         $this->_schoolName = "Pre school";
+        $this->_js = "homescript.js";
+        $imageWord = "BETA SCHOOL MANAGEMENT SYSTEM";
+        $imageCaption = " - Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet eveniet architecto tempore odio facilis
+                adipisicing elit -";
+        $languageChoose = "Language";
 
         $data = (object) array(
             "schoolLogo" => $this->_schoolLogo,
@@ -31,7 +38,71 @@ class SchoolController extends Controller
             "caption" => $this->_caption,
             "optImage" => $this->_optImage,
             "schoolName" => $this->_schoolName,
+            "js" => $this->_js,
+            "imageWord" => $imageWord,
+            "imageCaption" => $imageCaption,
+            "languageChoose" => $languageChoose
         );
+
+        return view('schoolMain/index',['data' => $data]);
+    }
+
+    public function changelang(Request $request){
+        $lang = $request->input('lang');
+
+        if($lang == "en"){
+            config(['app.locale' => 'en']);
+
+            $this->_schoolLogo = "testinglogo.png";
+            $this->_title = "Home";
+            $this->_css = "homecss.css";
+            $this->_caption = Lang::get('caption');
+            $this->_optImage = "ribbon.png";
+            $this->_schoolName = Lang::get('caption');
+            $this->_js = "homescript.js";
+            $imageWord = Lang::get('imageWord');
+            $imageCaption = Lang::get('imageCaption');
+            $languageChoose = Lang::get('languageChoose');
+
+            $data = (object) array(
+                "schoolLogo" => $this->_schoolLogo,
+                "title" => $this->_title,
+                "css" => $this->_css,
+                "caption" => $this->_caption,
+                "optImage" => $this->_optImage,
+                "schoolName" => $this->_schoolName,
+                "js" => $this->_js,
+                "imageWord" => $imageWord,
+                "imageCaption" => $imageCaption,
+                "languageChoose" => $languageChoose
+            );
+        }else if($lang == "id"){
+            config(['app.locale' => 'id']);
+
+            $this->_schoolLogo = "testinglogo.png";
+            $this->_title = "Home";
+            $this->_css = "homecss.css";
+            $this->_caption = Lang::get('caption');
+            $this->_optImage = "ribbon.png";
+            $this->_schoolName = Lang::get('caption');
+            $this->_js = "homescript.js";
+            $imageWord = Lang::get('imageWord');
+            $imageCaption = Lang::get('imageCaption');
+            $languageChoose = Lang::get('languageChoose');
+
+            $data = (object) array(
+                "schoolLogo" => $this->_schoolLogo,
+                "title" => $this->_title,
+                "css" => $this->_css,
+                "caption" => $this->_caption,
+                "optImage" => $this->_optImage,
+                "schoolName" => $this->_schoolName,
+                "js" => $this->_js,
+                "imageWord" => $imageWord,
+                "imageCaption" => $imageCaption,
+                "languageChoose" => $languageChoose
+            );
+        }
 
         return view('schoolMain/index',['data' => $data]);
     }

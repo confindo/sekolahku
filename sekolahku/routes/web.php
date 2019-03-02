@@ -13,4 +13,5 @@
 
 Route::group(['middleware'=>'guest'],function(){
     Route::get('/',['uses'=>'SchoolController@index']);
+    Route::post('/changelang',['uses'=>'SchoolController@changelang']);
 });

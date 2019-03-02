@@ -7,6 +7,5 @@
     </head>
     <body>
         @yield('section')
-        @include('template/footer')
     <body>
 </html>
