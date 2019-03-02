@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#language').change(function(e){
+	$('#languagechoose').change(function(e){
 	   	e.preventDefault();
 	   	$.ajaxSetup({
 	      	headers: {
@@ -10,7 +10,7 @@ $(document).ready(function(){
 	      	url: "{{ url('/changelang') }}",
 	      	method: 'POST',
 	      	data: {
-	         	lang: $('#language').val(),
+	         	lang: $('#languagechoose').val(),
 	      	},
 	      	success: function(result){
 	         	console.log(result);

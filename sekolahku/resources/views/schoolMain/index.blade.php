@@ -23,8 +23,8 @@
                 <h6><i>{{ $data->caption }}</i></h6>
             </div>
             <div class="col-md-2" id="language">
-                <label class="btn btn-success"><i class="fas fa-language"></i>{{ $data->languageChoose }}</label>
-                <select class="form-control" name="language" id="language">
+                <label class="btn btn-success"><i class="fas fa-language"></i> {{ $data->languageChoose }}</label>
+                <select class="form-control" name="languagechoos" id="languagechoose">
                     <option value="en">English</option>
                     <option value="id">Indonesia</option>
                 </select>
