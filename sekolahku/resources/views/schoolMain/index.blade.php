@@ -29,7 +29,7 @@
                 </select>
             </div>
             <div class="col-md-1">
-                <img src="{{ asset('schoolassets/images/ribbon.png') }}" class="img-responsive" id="ribbonLogo">
+                <img src="{{ asset('schoolassets/images') }}/{{ $data->optImage }}" class="img-responsive" id="ribbonLogo">
             </div>
         </div>
     </div>
