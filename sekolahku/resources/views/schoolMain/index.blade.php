@@ -24,10 +24,13 @@
             </div>
             <div class="col-md-2" id="language">
                 <label class="btn btn-success"><i class="fas fa-language"></i> {{ $data->languageChoose }}</label>
-                <select class="form-control" name="languagechoose" id="languagechoose">
-                    <option value="en">English</option>
-                    <option value="id">Indonesia</option>
-                </select>
+                <form method="post" action="{{ url('changelang') }}" id="changelang">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <select class="form-control" name="languagechoose" id="languagechoose">
+                        <option value="en">English</option>
+                        <option value="id">Indonesia</option>
+                    </select>
+                </form>
             </div>
             <div class="col-md-1">
                 <img src="{{ secure_asset('schoolassets/images') }}/{{ $data->optImage }}" class="img-responsive" id="ribbonLogo">

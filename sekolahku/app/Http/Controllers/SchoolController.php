@@ -80,7 +80,7 @@ class SchoolController extends Controller
             config(['app.locale' => 'id']);
 
             $this->_schoolLogo = "testinglogo.png";
-            $this->_title = "Rumah";
+            $this->_title = "Halaman Awal";
             $this->_css = "homecss.css";
             $this->_caption = Lang::get('caption');
             $this->_optImage = "ribbon.png";
