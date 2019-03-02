@@ -1,21 +1,15 @@
 $(document).ready(function(){
 	$('#languagechoose').change(function(e){
-	   // 	e.preventDefault();
-	   // 	$.ajaxSetup({
-	   //    	headers: {
-	   //        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-	   //    	}
-	  	// });
-	   // 	$.ajax({
-	   //    	url: "{{ url('/changelang') }}",
-	   //    	method: 'post',
-	   //    	data: {
-	   //       	lang: $('#languagechoose').val(),
-	   //    	},
-	   //    	success: function(result){
-	   //       	console.log(result);
-	   //    	}
-	   //  });
-	   alert('yes');
+	   	$.ajax({
+            type:'POST',
+            url:'/changelang',
+            data:{
+            	_token : '<?php echo csrf_token() ?>',
+            	lang : $('#languagechoose').val()
+            }
+            success:function(data) {
+                alert('success');
+            }
+        });
 	});
 });
