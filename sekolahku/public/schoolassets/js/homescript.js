@@ -4,7 +4,7 @@ $(document).ready(function(){
             type:'POST',
             url:'/changelang',
             data:{
-            	_token : '<?php echo csrf_token() ?>',
+            	_token : '{{ csrf_token() }}',
             	lang : $('#languagechoose').val()
             },
             success: function(data){
