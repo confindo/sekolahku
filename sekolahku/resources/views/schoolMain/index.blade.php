@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-2" id="language">
                 <label class="btn btn-success"><i class="fas fa-language"></i> {{ $data->languageChoose }}</label>
-                <form method="post" action="{{ url('changelang') }}" id="changelang">
+                <form method="post" action="https://sekolahku.herokuapp.com/changelang" id="changelang">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <select class="form-control" name="languagechoose" id="languagechoose">
                         <option value="en">English</option>
