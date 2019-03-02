@@ -1,10 +1,15 @@
 $(document).ready(function(){
 	$('#languagechoose').change(function(e){
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+			}
+		});
+
 	   	$.ajax({
             type:'POST',
-            url:'/changelang',
+            url:'{{ url("/changelang") }}',
             data:{
-            	_token : '{{ csrf_token() }}',
             	lang : $('#languagechoose').val()
             },
             success: function(data){
