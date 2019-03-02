@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Lang;
 
+use Config;
+
 class SchoolController extends Controller
 {
     //
