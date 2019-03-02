@@ -1,5 +1,4 @@
 <h1><b>Sekolahku Development</b></h1>
-<hr/>
 <p>Description<p>
 <p>This application was made to simplify the school management system</p>
 <p>Features</p>
