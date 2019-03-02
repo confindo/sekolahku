@@ -11,10 +11,6 @@
 |
 */
 
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
-
 Route::group(['middleware'=>'guest'],function(){
     Route::get('/',['uses'=>'SchoolController@index']);
     Route::post('/changelang',['uses'=>'SchoolController@changelang']);
