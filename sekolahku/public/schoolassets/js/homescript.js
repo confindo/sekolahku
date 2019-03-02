@@ -6,8 +6,8 @@ $(document).ready(function(){
             data:{
             	_token : '<?php echo csrf_token() ?>',
             	lang : $('#languagechoose').val()
-            }
-            success:function(data) {
+            },
+            success: function(data){
                 alert('success');
             }
         });
