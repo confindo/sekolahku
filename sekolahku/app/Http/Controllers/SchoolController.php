@@ -51,7 +51,7 @@ class SchoolController extends Controller
         $lang = $request->input('lang');
 
         if($lang == "en"){
-            config(['app.locale' => 'en']);
+            Config::set('app.locale', 'en');
 
             $this->_schoolLogo = "testinglogo.png";
             $this->_title = "Home";
@@ -77,7 +77,7 @@ class SchoolController extends Controller
                 "languageChoose" => $languageChoose
             );
         }else if($lang == "id"){
-            config(['app.locale' => 'id']);
+            Config::set('app.locale', 'id');
 
             $this->_schoolLogo = "testinglogo.png";
             $this->_title = "Halaman Awal";
