@@ -1,7 +1,7 @@
-<h1><b>Sekolahku Development</b></h1>
-<p>Description<p>
+<h1><b>Sekolahku Development V.1</b></h1>
+<p>Description :<p>
 <p>This application was made to simplify the school management system</p>
-<p>Features</p>
+<p>Features :</p>
 <ul>
     <li>Teachers List View</li>  
     <li>Subjects View</li>
@@ -13,7 +13,7 @@
     <li>Student Course Material</li>
     <li>Student Document Management</li>
 </ul>
-<p>Information</p>
+<p>Information :</p>
 <p>confindoid@gmail.com</p>
 <p></p>
 <p>&copy; Confindoid IT Solution 2019</p>
