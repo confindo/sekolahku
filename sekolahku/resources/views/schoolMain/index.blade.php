@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-2">
-                <img src="{{ asset('schoolassets/images') }}/{{ $data->schoolLogo }}" class="img-responsive" id="schoolLogo">
+                <img src="https://{{ asset('schoolassets/images') }}/{{ $data->schoolLogo }}" class="img-responsive" id="schoolLogo">
             </div>
             <div class="col-md-6" id="slogan">
                 <h4><b>{{ $data->schoolName }}</b></h4>
@@ -29,7 +29,7 @@
                 </select>
             </div>
             <div class="col-md-1">
-                <img src="{{ asset('schoolassets/images') }}/{{ $data->optImage }}" class="img-responsive" id="ribbonLogo">
+                <img src="https://{{ asset('schoolassets/images') }}/{{ $data->optImage }}" class="img-responsive" id="ribbonLogo">
             </div>
         </div>
     </div>
