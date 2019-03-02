@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app()->getLocale() }}">
     <head>
         <title>@yield('title')</title>
         @include('template/header')

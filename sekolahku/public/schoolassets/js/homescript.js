@@ -8,7 +8,7 @@ $(document).ready(function(){
 	  	});
 	   	$.ajax({
 	      	url: "{{ url('/changelang') }}",
-	      	method: 'POST',
+	      	method: 'post',
 	      	data: {
 	         	lang: $('#languagechoose').val(),
 	      	},
