@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-2" id="language">
                 <label class="btn btn-success"><i class="fas fa-language"></i> {{ $data->languageChoose }}</label>
-                <select class="form-control" name="languagechoos" id="languagechoose">
+                <select class="form-control" name="languagechoose" id="languagechoose">
                     <option value="en">English</option>
                     <option value="id">Indonesia</option>
                 </select>
